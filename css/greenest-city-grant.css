@@ -1,0 +1,418 @@
+/* NOTE: I have included most of the references for materials that were not taught in class in the section: Mobile View 320px.
+The remaining code for view section follow the parent code in Mobile View 320px. Changes that occur were mostly to modify the
+content so it fits the current device view*/
+
+
+/* ======================================================== Mobile View (320px and Up) ================================================== */
+/* mobile View (320px and Up) */
+@media (min-width: 0px) {
+    body {
+        font-family: 'Open Sans', sans-serif;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden; /* Hide horizontal overflow for the entire body: https://www.w3schools.com/cssref/css3_pr_overflow-x.php */
+        box-sizing: border-box; /* The use of this is to prevent content overflowing using padding and margin.  */
+    }
+    
+    /* Header */
+    header {
+        max-width: 100%;  /* overflow: hidden; To prevent content from overflowing the navigation bar. 
+                             Idea retrieved from: https://www.w3schools.com/cssref/pr_pos_overflow.php */
+        padding: 0.8rem;
+        background-color: #13795F;
+        text-align: center;
+    }
+    
+    header nav a {
+        color: #fff;
+        margin: 0 0.5rem;
+        font-size: 0.75rem;
+        text-decoration: none;  /* This is used to remove the underline for hyperlinks when using the <a> tag. Idea retrieved from: https://www.w3schools.com/cssref/pr_text_text-decoration.php#gsc.tab=0 */
+    }
+    
+    header nav a.active {
+        color: #5050FF;
+    }
+    
+    /* Grant Intro Section */
+    .grant-intro {
+        max-width: 100%;
+        overflow: hidden;
+        font-family: 'Montserrat';
+        text-align: left;
+    }
+    
+    .image-placeholder {
+        position: relative;
+        overflow: hidden;
+        width: 100%; /* For responsive width */
+        height: 30rem;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-placeholder img {
+        width: 100%; /* For responsive width */
+        height: 100%;
+        display: block;
+        object-fit: cover; /*https://www.w3schools.com/css/css3_object-fit.asp*/
+        filter: brightness(50%); /*https://www.w3schools.com/cssref/css3_pr_filter.php*/
+    }
+    
+    /* Grant Subtitle and Title - Positioned over Image */
+    .grant-subtitle {
+        position: absolute;
+        bottom: 18%;
+        left: 5%;
+        transform: translate(20%, -80%); /*This is to ensure the position of the sub title and applies the same idea for the main title.
+                                        Idea retrieved from: https://www.w3schools.com/cssref/css3_pr_transform.php | 
+                                        https://www.w3schools.com/cssref/css3_pr_transition.php */
+        color: #88B29F;
+        font-size: 1rem;
+        font-style: italic;
+    }
+    
+    .grant-title {
+        position: absolute;
+        bottom: 15%;
+        left: 5%;
+        transform: translate(5%, 30%);  /* The use of this was explained above in sub title section. */
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        position: absolute;
+    }
+    
+    /* Grant Details Section */
+    .grant-info-grid {
+        display: grid;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .grant-info-blackbox {
+        width: 100%; /* Responsive width */
+        padding: 1rem;
+        box-sizing: border-box;
+        text-align: center;
+        color: #ffffff;
+        background-color: #88B29F;
+    }
+    .grant-info-blackbox h1{
+        font-size: 1rem;
+        color: #13795F;
+    }
+    .grant-info-blackbox p{
+        font-size: 1.13rem;
+    }
+    
+    /* Grant Requirements and Description */
+    .grant-info-box {
+        width: 100%; /* Responsive width */
+        padding: 0rem;
+        box-sizing: border-box;
+        text-align: left;
+        color: #000000;
+    }
+    .grant-requirements {
+        padding: 1rem 2rem;
+    }
+    
+    .grant-requirements h1{
+        font-size: 1rem;  
+    }
+    .grant-requirements p {
+        font-size: 0.75rem;
+        margin-bottom: 1rem 0rem;
+    }
+    
+    /* ------------------------------------------------------- */
+    
+    /* Additional Info Section */
+    .additional-info-grid {
+        display: grid;
+        max-width: 100%;
+        overflow: hidden;
+        gap: 1rem;
+        background-color: #F8EEE1;
+    }
+    
+    .additional-info-box{
+        display: grid;
+        padding: 0rem 1rem;
+        margin: 0;
+        width: 100%; /* Responsive width */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .info-box {
+        padding: 0.5rem 0.95rem;
+    }
+    
+    .info-box h1, p{
+        font-size: 0.75rem;
+    }
+    
+    /* Additional Info Image Container */
+    .additional-info-image-box {
+        max-width: 100%; /* For responsive width */
+        height: auto; /* Fixed container height */
+        position: relative;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        background-color: #F8EEE1;
+    }
+    
+    /* Additional Info Image Styling */
+    .additional-info-image-box img {
+        width: 100%; /* For responsive width */
+        height: auto; /* For responsive height */
+        margin: auto;
+        display: block;
+        
+    }
+    
+    /* Additional Info Button Box */
+    .additional-info-button-box {
+        text-align: center;
+        padding: 2rem 0;
+        background-color: #F8EEE1;
+    }
+    
+    .additional-info-button {
+        padding: 0.8rem 1.5rem;
+        background-color: #13795F;
+        color: #fff;
+        border: none;
+        cursor: pointer;  /*This is to make the cursor turn into a pointer when it hovers above the button indicating it's a link.
+                            Idea retrieved from: https://www.w3schools.com/cssref/pr_class_cursor.php*/
+    }
+    
+    .additional-info-button:hover {  /* Idea retrieved from: https://www.w3schools.com/css/css3_buttons.asp */
+        background-color: #88B29F;
+    }
+}
+
+/* ======================================================== Mobile View (550px and Up) ================================================== */
+/* Tablet View (550px and Up) */
+@media (min-width: 550px) {
+
+    /* Grant Intro Section */
+    header {
+        text-align: right;
+    }
+
+    /* Grant Subtitle and Title - Positioned over Image */
+    .grant-title {
+        transform: translate(5%, 70%);
+        font-size: 2rem;
+    }
+    .grant-subtitle {
+        font-size: 1.25rem;
+        transform: translate(30%, -60%);
+    }
+
+    /* Grant Requirements and Description */
+    .grant-requirements {
+        padding: 1rem 3rem;
+    }
+    .grant-requirements h1{
+        font-size: 1rem;  
+    }
+    .grant-requirements p {
+        font-size: 0.75rem;
+        margin-bottom: 1rem 0rem;
+    }
+
+    /* Additional Info Section */
+    .additional-info-grid {
+        display: grid;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .additional-info-box{
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: auto;
+
+    }
+
+    /* Additional Info Section */
+    .additional-info-box{
+        padding-inline: 2rem;
+    }
+    
+    .info-box {
+        padding-block: 1rem;
+    }
+    .info-box h1{
+        font-size: 1rem;
+    }
+    .info-box p{
+        font-size: 0.75rem;
+    }
+
+}
+
+/* ======================================================== Tablet View (800px and Up) ================================================== */
+/* Tablet View (8000px and Up) */
+@media (min-width: 800px) {
+
+    /* Grant Subtitle and Title - Positioned over Image */
+    .grant-title {
+        font-size: 2.5rem;
+    }
+    .grant-subtitle {
+        font-size: 1.5rem;
+        transform: translate(30%, -60%);
+    }
+
+    grant-requirements {
+        padding-block: 5rem;
+    }
+
+    /* Additional Info Section */
+    .additional-info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .additional-info-box{
+        padding-inline: 2rem;
+        height: 50%;
+    }
+
+    /* Additional Info Button Box */
+    .additional-info-button-box {
+        text-align: left;
+        padding-top: 3rem;
+        padding-inline: 2.5rem;
+    }
+
+    .additional-info-button {
+        position: absolute;
+        transform: translate(0, -220%);
+        padding: 0.8rem 1.5rem;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+/* ========================================================  Desktop View (960px and Up) ================================================== */
+/* Tablet View (960px and Up) */
+@media (min-width: 960px) {
+
+    /* Grant Subtitle and Title - Positioned over Image */
+    .grant-title {
+        font-size: 3rem;
+    }
+    .grant-subtitle {
+        font-size: 1.75rem;
+        transform: translate(35%, -50%);
+    }
+
+    /* Grant Details Section */
+    .grant-info-grid {
+        max-width: 100%;
+        grid-template-columns: 1fr 2fr;
+    }
+    .grant-info-blackbox {
+        width: 100%;
+        padding: 2rem;
+        margin-block: 3rem;
+        margin-left: 5rem;
+    }
+
+    /* Grant Requirements and Description */
+    .grant-info-box {
+        padding-left: 5rem;
+    }
+    
+    .grant-requirements {
+        padding-block: 1rem;
+        padding-right: 3.5rem;
+    }
+    .grant-requirements h1 {
+
+        padding-top: 1.5rem;  
+    }
+    .grant-requirements p {
+
+        padding-bottom: 0rem;
+    }
+
+    .additional-info-box{
+        padding-inline: 4rem;
+        height: 60%;
+    }
+
+    /* Additional Info Button Box */
+    .additional-info-button-box {
+        text-align: left;
+        padding-top: 2rem;
+        padding-inline: 4.5rem;
+    }
+}
+
+/* ======================================================== Large Desktop View (1240px and Up) ================================================== */
+/* Tablet View (1240px and Up) */
+@media (min-width: 1240px) {
+
+    /* Grant Subtitle and Title - Positioned over Image */
+    .grant-title {
+        font-size: 3.5rem;
+    }
+    .grant-subtitle {
+        font-size: 1.75rem;
+        transform: translate(40%, -60%);
+    }
+
+    /* Grant Details Section */
+    .grant-info-grid {
+        max-width: 100%;
+        grid-template-columns: 1fr 2fr;
+    }
+    .grant-info-blackbox {
+        width: 100%;
+        padding: 3rem;
+        margin-block: 3rem;
+        margin-left: 6rem;
+    }
+
+    /* Grant Requirements and Description */
+    .grant-info-box {
+        padding-left: 6rem;
+    }
+    
+    .grant-requirements {
+        padding-block: 1rem;
+        padding-right: 3.5rem;
+    }
+    .grant-requirements h1 {
+        font-size: 1.13rem;
+        padding-top: 1.5rem;  
+    }
+    .grant-requirements p {
+        font-size: 1rem;
+        padding-bottom: 0rem;
+    }
+
+    .additional-info-box{
+        padding-inline: 5rem;
+        height: 60%;
+    }
+    .info-box h1{
+        font-size: 1.13rem;
+    }
+    .info-box p{
+        font-size: 1.rem;
+    }
+
+    /* Additional Info Button Box */
+    .additional-info-button-box {
+        text-align: left;
+        padding-top: 2rem;
+        padding-inline: 5.5rem;
+    }
+}
